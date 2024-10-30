@@ -1,0 +1,38 @@
+// Extra-Large Screens
+@include mediaXL {
+}
+
+// Large Screens (Desktops & Laptops)
+@include mediaLG {
+}
+
+// Tablets & Small Laptops
+@include mediaMD {
+  main {
+    h1 {
+      line-height: 5rem;
+      font-size: 1.5rem;
+    }
+  }
+  .menu-nav {
+    height: 70vh;
+    transform: translate3d(-100px, 0, 0);
+    font-size: 24px;
+  }
+  .menu-branding {
+    height: 30vh;
+    transform: translate3d(100px, 0, 0);
+  }
+  .portrait {
+    background: url(../img/sadimahin1.jpg);
+    width: 150px;
+    height: 150px;
+  }
+}
+
+// Smartphones
+@include mediaSM {
+  main#home h1 {
+    font-size: 4.7rem;
+  }
+}
