@@ -147,7 +147,7 @@
     transform: translate3d(100px, 0, 0);
   }
   .portrait {
-    background: url(\img\sadimahin1.jpg);
+    background: url(/img/sadimahin1.jpg);
     width: 150px;
     height: 150px;
   }
@@ -189,7 +189,7 @@ body {
   line-height: 1.5;
 }
 body#bg-image {
-  background: url(\test\img\portfolio2.jpg);
+  background: url(.../img/portfolio2.jpg);
   background-attachment: fixed;
   background-size: cover;
 }
