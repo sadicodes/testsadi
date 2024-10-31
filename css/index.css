@@ -75,17 +75,20 @@ header {
 }
 
 /* Menu Styles */
+/* Menu Styles */
 .menu {
   position: fixed;
   top: 0;
   width: 100%;
-  opacity: 0.9;
+  opacity: 0;
   visibility: hidden;
-  transition: all 0.6s ease-out;
+  transition: opacity 0.5s ease-out, visibility 0s linear 0.5s;
 }
 
 .menu.show {
+  opacity: 0.9;
   visibility: visible;
+  transition: opacity 0.5s ease-out, visibility 0s;
 }
 
 .menu-branding,
@@ -102,14 +105,43 @@ header {
 
 .menu-branding {
   background: #444;
-  transform: translate3d(0, 100%, 0);
-  transition: all 0.6s ease-out;
+  transform: translateY(100%);
+  transition: transform 0.5s ease-out;
 }
 
 .menu-branding.show {
-  transform: translate3d(0, 0, 0);
+  transform: translateY(0);
 }
 
+.menu-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: rgb(55, 55, 55);
+  transform: translateY(-100%);
+  transition: transform 0.5s ease-out;
+}
+
+.menu-nav.show {
+  transform: translateY(0);
+}
+
+.menu .nav-item {
+  transform: translateX(100%);
+  transition: transform 0.5s ease-out;
+}
+
+.menu .nav-item.show {
+  transform: translateX(0);
+}
+
+/* Responsive styles (update only if necessary) */
+@media screen and (max-width: 768px) {
+  .menu-branding,
+  .menu-nav {
+    width: 100%;
+  }
+}
 /* Default portrait styles */
 .menu-branding .portrait {
   width: 250px;
@@ -207,7 +239,7 @@ h3.sm-heading {
 main {
   padding: 4rem;
   height: 100%;
-  min-height: calc(100vh - 20px);
+  
 }
 
 main .icons {
