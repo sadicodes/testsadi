@@ -146,7 +146,7 @@ header {
 .menu-branding .portrait {
   width: 250px;
   height: 250px;
-  background: url(/img/sadi1.jpg);
+  background: url(../img/sadi1.jpg);
   border-radius: 50%;
   border: solid 3px #eece18;
   opacity: 1;
@@ -239,7 +239,6 @@ h3.sm-heading {
 main {
   padding: 4rem;
   height: 100%;
-  
 }
 
 main .icons {
@@ -282,12 +281,11 @@ main#home h1 {
     h2 {
       font-size: 1.2rem;
       text-align: center;
-      margin-top: 2rem
+      margin-top: 2rem;
     }
-    .icons{
+    .icons {
       text-align: center;
       font-size: 1rem;
-
     }
   }
 
