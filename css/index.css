@@ -6,6 +6,7 @@
   cursor: pointer;
   transition: all 0.6s ease-out;
 }
+
 .menu-btn .btn-line {
   width: 28px;
   height: 3px;
@@ -14,19 +15,23 @@
   transition: all 0.6s ease-out;
   cursor: pointer;
 }
+
 .menu-btn .btn-line:hover {
   background: #eece18;
-  transition: all 0.6s ease-out;
 }
+
 .menu-btn.close {
   transform: rotate(180deg);
 }
+
 .menu-btn.close .btn-line:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
+
 .menu-btn.close .btn-line:nth-child(2) {
   opacity: 0;
 }
+
 .menu-btn.close .btn-line:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -7px);
 }
@@ -37,10 +42,13 @@
   width: 100%;
   opacity: 0.9;
   visibility: hidden;
+  transition: all 0.6s ease-out; /* Added here for smoother animation */
 }
+
 .menu.show {
   visibility: visible;
 }
+
 .menu-branding,
 .menu-nav {
   display: flex;
@@ -52,6 +60,7 @@
   height: 100vh;
   overflow: hidden;
 }
+
 .menu-nav {
   list-style: none;
   margin: 0;
@@ -60,35 +69,43 @@
   transform: translate3d(0, -100%, 0);
   transition: all 0.6s ease-out;
 }
+
 .menu-nav.show {
   transform: translate3d(0, 0, 0);
 }
+
 .menu-branding {
   background: #444;
   transform: translate3d(0, 100%, 0);
   transition: all 0.6s ease-out;
 }
+
 .menu-branding.show {
   transform: translate3d(0, 0, 0);
 }
+
 .menu-branding .portrait {
   width: 250px;
   height: 250px;
-  background: url(../img/sadimahin.jpg);
+  background: url(/img/sadi1.jpg);
   border-radius: 50%;
   border: solid 3px #eece18;
   opacity: 1;
 }
+
 .menu .nav-item {
   transform: translate3d(600px, 0, 0);
   transition: all 0.6s ease-out;
 }
+
 .menu .nav-item.show {
   transform: translate3d(0, 0, 0);
 }
+
 .menu .nav-item.current > a {
   color: #eece18;
 }
+
 .menu .nav-link {
   display: inline-block;
   position: relative;
@@ -100,82 +117,84 @@
   color: #fff;
   transition: all 0.6s ease-out;
 }
+
 .menu .nav-link:hover {
   color: #eece18;
 }
+
 .menu .nav-item:nth-child(1) {
   transition-delay: 0.1s;
 }
+
 .menu .nav-item:nth-child(2) {
   transition-delay: 0.2s;
 }
+
 .menu .nav-item:nth-child(3) {
   transition-delay: 0.3s;
 }
+
 .menu .nav-item:nth-child(4) {
   transition-delay: 0.4s;
 }
 
-@media screen and (min-width: 1201px) {
-  .about-info {
-    grid-template-columns: repeat(4, 1fr);
-  }
-  .meetups {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-@media screen and (min-width: 769px) and (max-width: 1200px) {
-  .about-info {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .meetups {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
+/* Responsive Design */
 @media screen and (max-width: 768px) {
   main h1 {
     line-height: 5rem;
     font-size: 1.5rem;
   }
+
   .menu-nav {
     height: 70vh;
     transform: translate3d(-100px, 0, 0);
     font-size: 24px;
+    transition: all 0.6s ease-out;
   }
+
   .menu-branding {
     height: 30vh;
     transform: translate3d(100px, 0, 0);
+    transition: all 0.6s ease-out;
   }
+
   .portrait {
-    background: url(../img/sadimahin1.jpg);
+    background: url(/img/sadi.jpg), rgba(255, 206, 24, 0.8); /* Lightened primary color with opacity */
     width: 150px;
     height: 150px;
   }
-  .about-info {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "bio-image" "bio" "places" "food" "hobby";
-  }
-  .about-info .card {
-    margin-bottom: 20px;
-    min-height: 300px;
-    width: 100%;
-  }
-  .meetups {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
+
 @media screen and (max-width: 576px) {
   main#home h1 {
-    font-size: 4.7rem;
+    font-size: 4rem;
+    line-height: 4rem;
   }
-  .about-info {
-    grid-template-columns: 1fr;
-    grid-template-areas: "bio-image" "bio" "places" "food" "hobby";
+
+  main#home h2 {
+    font-size: 1.3rem;
   }
-  .meetups {
-    grid-template-columns: 1fr;
+
+  .menu-nav {
+    height: 70vh;
+    transform: translate3d(-100px, 0, 0);
+    font-size: 24px;
+    transition: all 0.6s ease-out;
+  }
+
+  .menu-branding {
+    height: 30vh;
+    transform: translate3d(100px, 0, 0);
+    transition: all 0.6s ease-out;
+  }
+
+  .portrait {
+    background: url(/img/sadi.jpg), rgba(255, 206, 24, 0.7); /* Adjusted opacity for mobile */
+    width: 150px;
+    height: 150px;
   }
 }
+
 * {
   box-sizing: border-box;
 }
@@ -188,17 +207,19 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
 }
+
 body#bg-image {
-  background: url(../img/portfolio2.jpg);
+  background: url(/img/portfolio2.jpg);
   background-attachment: fixed;
   background-size: cover;
 }
+
 body#bg-image .overlay {
   position: absolute;
   top: 0;
   bottom: 0;
   width: 100%;
-  height: 100;
+  height: 100%;
   background: rgba(68, 68, 68, 0.7);
   z-index: -1;
 }
@@ -209,11 +230,13 @@ h3 {
   margin: 0;
   font-weight: 400;
 }
+
 h1.lg-heading,
 h2.lg-heading,
 h3.lg-heading {
   font-size: 6rem;
 }
+
 h1.sm-heading,
 h2.sm-heading,
 h3.sm-heading {
@@ -233,7 +256,7 @@ header {
   width: 100%;
 }
 
-.Scondary-text {
+.Secondary-text {
   color: #eece18;
 }
 
@@ -242,132 +265,31 @@ main {
   height: 100%;
   min-height: calc(100vh - 20px);
 }
+
 main .icons {
   margin-top: 1rem;
 }
+
 main .icons a {
   padding: 0.4rem;
 }
+
 main .icons a:hover {
   color: #eece18;
   transition: all 0.6s ease-out;
 }
+
 main#home {
   overflow: hidden;
 }
+
 main#home h1 {
   margin-top: 20vh;
-}
-
-.about-info {
-  display: grid;
-  grid-template-areas: "bio-image bio bio" "places food hobby";
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 30px;
-}
-.about-info .bio-image {
-  grid-area: bio-image;
-  height: 240px;
-  width: 240px;
-  border: #eece18 5px solid;
-  border-radius: 50%;
-}
-.about-info .bio {
-  grid-area: bio;
-  font-size: 1.3rem;
-}
-.about-info .places {
-  grid-area: places;
-}
-.about-info .food {
-  grid-area: food;
-}
-.about-info .hobby {
-  grid-area: hobby;
-}
-.about-info .card {
-  background: rgb(80.75, 80.75, 80.75);
-  padding: 1.5rem;
-  min-height: 200px;
-  word-wrap: break-word;
-  border-bottom: #eece18 5px solid;
-  box-shadow: 0 0px 50px -4px #cec040;
-}
-.about-info .Card-Header {
-  color: #fffbfb;
-  font-size: 1.2rem;
-  font-weight: 450;
-}
-
-.meetup {
-  display: grid;
-  grid-gap: 0.7rem;
-  grid-template-columns: repeat(3, 1fr);
-}
-.meetup img {
-  width: 100%;
-  border: 4px solid #fff;
-}
-.meetup img:hover {
-  border-color: #eece18;
-  box-shadow: 0 0 7px 3px #eece18;
-  opacity: 0.6;
-  transition: all 0.6s ease-out;
-}
-
-.boxes {
-  display: flex;
-  width: 70%;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-top: 1rem;
-  margin-left: 15%;
-  margin-right: 15%;
-  font-size: 1.5rem;
-  border: 2px solid #fff;
-  padding: 1.5rem 2.5rem;
-  margin-bottom: 2rem;
-  transition: all 0.6s ease-out;
-}
-.boxes:hover {
-  background-color: #eece18;
-  color: #000;
-  padding: 0.5rem 0.5rem;
-  cursor: pointer;
-}
-.boxes span {
-  color: #000;
-}
-
-.btn,
-.btn-dark,
-.btn-light {
-  display: block;
-  padding: 1rem 1rem;
-  border: 0;
-  margin-bottom: 0.3rem;
-}
-.btn:hover,
-.btn-dark:hover,
-.btn-light:hover {
-  background: #eece18;
-  color: switch-color(#eece18);
-}
-
-.btn-light {
-  background: rgb(195.5, 195.5, 195.5);
-  color: #333;
-}
-
-.btn-dark {
-  background: black;
-  color: #fff;
 }
 
 #main-footer {
   text-align: center;
   padding: 15px;
   background: rgb(93.5, 93.5, 93.5);
-  color: switch-color(#444);
+  color: #444;
 }
