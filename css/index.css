@@ -1,3 +1,41 @@
+/* Global Styles */
+body {
+  background-color: #444;
+  color: #fff;
+  height: 100%;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+}
+
+body#bg-image {
+  background: url(../img/portfolio2.jpg) fixed;
+  background-size: cover;
+}
+
+body#bg-image .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(68, 68, 68, 0.7);
+  z-index: -1;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Header Styles */
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+}
+
+/* Menu Button Styles */
 .menu-btn {
   position: absolute;
   z-index: 3;
@@ -10,7 +48,7 @@
 .menu-btn .btn-line {
   width: 28px;
   height: 3px;
-  margin: 0 0 5px 0;
+  margin-bottom: 5px;
   background: #fff;
   transition: all 0.6s ease-out;
   cursor: pointer;
@@ -36,13 +74,14 @@
   transform: rotate(-45deg) translate(5px, -7px);
 }
 
+/* Menu Styles */
 .menu {
   position: fixed;
   top: 0;
   width: 100%;
   opacity: 0.9;
   visibility: hidden;
-  transition: all 0.6s ease-out; /* Added here for smoother animation */
+  transition: all 0.6s ease-out;
 }
 
 .menu.show {
@@ -61,19 +100,6 @@
   overflow: hidden;
 }
 
-.menu-nav {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  background: rgb(55.25, 55.25, 55.25);
-  transform: translate3d(0, -100%, 0);
-  transition: all 0.6s ease-out;
-}
-
-.menu-nav.show {
-  transform: translate3d(0, 0, 0);
-}
-
 .menu-branding {
   background: #444;
   transform: translate3d(0, 100%, 0);
@@ -84,13 +110,27 @@
   transform: translate3d(0, 0, 0);
 }
 
+/* Default portrait styles */
 .menu-branding .portrait {
   width: 250px;
   height: 250px;
-  background: url(img/sadi1.jpg);
+  background: url(/img/sadi1.jpg);
   border-radius: 50%;
   border: solid 3px #eece18;
   opacity: 1;
+}
+
+.menu-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: rgb(55, 55, 55);
+  transform: translate3d(0, -100%, 0);
+  transition: all 0.6s ease-out;
+}
+
+.menu-nav.show {
+  transform: translate3d(0, 0, 0);
 }
 
 .menu .nav-item {
@@ -108,7 +148,6 @@
 
 .menu .nav-link {
   display: inline-block;
-  position: relative;
   padding: 0.8rem 0;
   font-size: 1.4rem;
   font-weight: 300;
@@ -138,92 +177,7 @@
   transition-delay: 0.4s;
 }
 
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-  main h1 {
-    line-height: 5rem;
-    font-size: 1.5rem;
-  }
-
-  .menu-nav {
-    height: 70vh;
-    transform: translate3d(-100px, 0, 0);
-    font-size: 24px;
-    transition: all 0.6s ease-out;
-  }
-
-  .menu-branding {
-    height: 30vh;
-    transform: translate3d(100px, 0, 0);
-    transition: all 0.6s ease-out;
-  }
-
-  .portrait {
-    background: url(../img/sadi.jpg), rgba(255, 206, 24, 0.8); /* Lightened primary color with opacity */
-    width: 150px;
-    height: 150px;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  main#home h1 {
-    font-size: 4rem;
-    line-height: 4rem;
-  }
-
-  main#home h2 {
-    font-size: 1.3rem;
-  }
-
-  .menu-nav {
-    height: 70vh;
-    transform: translate3d(-100px, 0, 0);
-    font-size: 24px;
-    transition: all 0.6s ease-out;
-  }
-
-  .menu-branding {
-    height: 30vh;
-    transform: translate3d(100px, 0, 0);
-    transition: all 0.6s ease-out;
-  }
-
-  .portrait {
-    background: url(../img/sadi.jpg), rgba(255, 206, 24, 0.7); /* Adjusted opacity for mobile */
-    width: 150px;
-    height: 150px;
-  }
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  background-color: #444;
-  color: #fff;
-  height: 100%;
-  margin: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.5;
-}
-
-body#bg-image {
-  background: url(../img/portfolio2.jpg);
-  background-attachment: fixed;
-  background-size: cover;
-}
-
-body#bg-image .overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(68, 68, 68, 0.7);
-  z-index: -1;
-}
-
+/* Text Styles */
 h1,
 h2,
 h3 {
@@ -241,25 +195,15 @@ h1.sm-heading,
 h2.sm-heading,
 h3.sm-heading {
   margin-bottom: 2rem;
-  padding: 1rem 1rem;
-  background: rgba(73.1, 73.1, 73.1, 0.5);
-}
-
-a {
-  text-decoration: none;
-  color: #fff;
-}
-
-header {
-  position: fixed;
-  z-index: 2;
-  width: 100%;
+  padding: 1rem;
+  background: rgba(73, 73, 73, 0.5);
 }
 
 .Secondary-text {
   color: #eece18;
 }
 
+/* Main Content Styles */
 main {
   padding: 4rem;
   height: 100%;
@@ -272,11 +216,11 @@ main .icons {
 
 main .icons a {
   padding: 0.4rem;
+  transition: all 0.6s ease-out;
 }
 
 main .icons a:hover {
   color: #eece18;
-  transition: all 0.6s ease-out;
 }
 
 main#home {
@@ -287,9 +231,57 @@ main#home h1 {
   margin-top: 20vh;
 }
 
+/* Footer Styles */
 #main-footer {
   text-align: center;
   padding: 15px;
-  background: rgb(93.5, 93.5, 93.5);
+  background: rgb(93, 93, 93);
   color: #444;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  main {
+    h1 {
+      font-size: 1rem;
+      text-align: center;
+      line-height: 5rem;
+    }
+    h2 {
+      font-size: 1.2rem;
+      text-align: center;
+      margin-top: 2rem
+    }
+    .icons{
+      text-align: center;
+      font-size: 1rem;
+
+    }
+  }
+
+  .menu-branding {
+    height: 40vh;
+    width: 100%;
+    transform: translate3d(100px, 0, 0);
+    transition: all 0.5s ease-out;
+  }
+  .menu-branding.show {
+    transform: translate3d(0, 0, 0);
+  }
+  .menu-nav {
+    height: 60vh;
+    width: 100%;
+    transform: translate3d(-100px, 0, 0);
+    transition: all 0.5s ease-out;
+  }
+  .menu-nav.show {
+    transform: translate3d(0, 0, 0);
+  }
+  .menu-branding.portrait {
+    background: url(../img/sadi1.jpg);
+    background-size: cover;
+    width: 150px !important;
+    height: 150px !important;
+    border-radius: 50%;
+  }
 }
