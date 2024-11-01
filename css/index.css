@@ -11,6 +11,7 @@ body {
 body#bg-image {
   background: url(../img/portfolio2.jpg) fixed;
   background-size: cover;
+  z-index: -2;
 }
 
 body#bg-image .overlay {
